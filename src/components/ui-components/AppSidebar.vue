@@ -18,9 +18,7 @@
           <v-list-tile-title>
             <router-link :to="link.route" class="link">
               <v-icon class="white--text">{{ link.icon }}</v-icon>
-              <span :class="{ 'nav-text': navbar, 'nav-text2': !navbar }">
-                {{ link.text }}
-              </span>
+              <span :class="{ 'nav-text': navbar, 'nav-text2': !navbar }">{{ link.text }}</span>
             </router-link>
           </v-list-tile-title>
         </v-list-tile>
@@ -40,7 +38,7 @@ export default {
         { icon: "folder_special", text: "Projects", route: "/projects" },
         { icon: "code", text: "Taskboard", route: "/taskboard" },
         { icon: "settings", text: "Task Detail", route: "/taskdetail" },
-        { icon: "person", text: "Team", route: "/team" },
+        { icon: "supervised_user_circle", text: "Team", route: "/team" },
         { icon: "supervisor_account", text: "Customers", route: "/customers" },
         { icon: "home", text: "Location", route: "/location" },
         { icon: "timelapse", text: "Timeline", route: "/timeline" },

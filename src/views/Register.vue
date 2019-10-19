@@ -5,9 +5,15 @@
         <!-- Features -->
         <v-flex xs12 sm6 md5 class="mx-auto">
           <div class="mt-5">
-            <div class="features pb-4" v-for="feature in features" :key="feature.id">
+            <div
+              class="features pb-4"
+              v-for="feature in features"
+              :key="feature.id"
+            >
               <div class="left icon">
-                <v-icon large :style="{color: feature.color}">{{ feature.icon }}</v-icon>
+                <v-icon large :style="{ color: feature.color }">
+                  {{ feature.icon }}
+                </v-icon>
               </div>
               <div class="pr-4 description">
                 <h3 class="title white-color">{{ feature.heading }}</h3>
@@ -145,12 +151,13 @@ export default {
   methods: {
     submit() {
       if (this.$refs.form.validate()) {
+        this.valid;
       }
     }
   }
 };
 </script>
- <style scoped>
+<style scoped>
 #register .icon {
   margin: -6px 1rem 3rem 0;
 }
@@ -200,4 +207,3 @@ export default {
   margin-top: 8px;
 }
 </style>
- 

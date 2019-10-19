@@ -4,7 +4,9 @@
       <div slot="image" class="text-center">
         <img src="@/assets/sarah.jpg" />
       </div>
-      <h2 slot="title" class="text-center font-weight-light heading-4 mt-1">Sarah Anderson</h2>
+      <h2 slot="title" class="text-center font-weight-light heading-4 mt-1">
+        Sarah Anderson
+      </h2>
       <div slot="name-input">
         <v-text-field
           class="i"
@@ -45,12 +47,6 @@ export default {
         v => (v && v.length >= 6) || "Minimum length is 8 characters"
       ]
     };
-  },
-  methods: {
-    submit() {
-      if (this.$refs.form.validate()) {
-      }
-    }
   }
 };
 </script>

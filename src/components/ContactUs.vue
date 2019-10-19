@@ -69,7 +69,8 @@
     <!-- Snackbar -->
     <slot name="snackbar">
       <v-snackbar v-model="snackbar6" :color="background">
-        <v-icon class="white--text mr-3">notification_important</v-icon>Your message is sended!
+        <v-icon class="white--text mr-3">notification_important</v-icon>Your
+        message is sended!
         <v-btn icon light @click="snackbar6 = false">
           <v-icon class="white--text">close</v-icon>
         </v-btn>

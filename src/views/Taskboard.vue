@@ -10,14 +10,23 @@
                 <v-card-title
                   class="font-weight-bold subtitle-1"
                   :style="{ color: warning }"
-                >Completed</v-card-title>
+                  >Completed</v-card-title
+                >
                 <v-card-text class="pt-0">
                   <!-- Draggable -->
                   <div class="draggable">
                     <draggable group="ITEMS" v-model="myList">
-                      <div v-for="item in myList" :key="item.id" class="drag-item">
+                      <div
+                        v-for="item in myList"
+                        :key="item.id"
+                        class="drag-item"
+                      >
                         <div class="content">
-                          <v-checkbox v-model="item.checked" class="left" color="#e14eca"></v-checkbox>
+                          <v-checkbox
+                            v-model="item.checked"
+                            class="left"
+                            color="#e14eca"
+                          ></v-checkbox>
                           <v-chip
                             small
                             ripple="true"
@@ -25,10 +34,15 @@
                             dark
                             class="right"
                             :style="{ background: item.chipColor }"
-                          >{{ item.chipText }}</v-chip>
+                            >{{ item.chipText }}</v-chip
+                          >
                         </div>
                         <div class="box">
-                          <h4 class="subtitle-1 grey--text text--lighten-3 mb-3">{{ item.text }}</h4>
+                          <h4
+                            class="subtitle-1 grey--text text--lighten-3 mb-3"
+                          >
+                            {{ item.text }}
+                          </h4>
                           <v-avatar class="mr-3" :size="avatarSize">
                             <img :src="item.img" />
                           </v-avatar>
@@ -49,24 +63,38 @@
                 <v-card-title
                   class="font-weight-bold subtitle-1"
                   :style="{ color: success }"
-                >In Progress</v-card-title>
+                  >In Progress</v-card-title
+                >
                 <v-card-text class="pt-0">
                   <!-- Draggable -->
                   <div class="draggable">
                     <draggable group="ITEMS" v-model="myList2">
-                      <div v-for="item in myList2" :key="item.id" class="drag-item">
+                      <div
+                        v-for="item in myList2"
+                        :key="item.id"
+                        class="drag-item"
+                      >
                         <div class="content">
-                          <v-checkbox v-model="item.checked" class="left" color="#e14eca"></v-checkbox>
+                          <v-checkbox
+                            v-model="item.checked"
+                            class="left"
+                            color="#e14eca"
+                          ></v-checkbox>
                           <v-chip
                             small
                             label
                             dark
                             class="right"
                             :style="{ background: item.chipColor }"
-                          >{{ item.chipText }}</v-chip>
+                            >{{ item.chipText }}</v-chip
+                          >
                         </div>
                         <div class="box">
-                          <h4 class="subtitle-1 grey--text text--lighten-3 mb-3">{{ item.text }}</h4>
+                          <h4
+                            class="subtitle-1 grey--text text--lighten-3 mb-3"
+                          >
+                            {{ item.text }}
+                          </h4>
                           <v-avatar class="mr-3" :size="avatarSize">
                             <img :src="item.img" />
                           </v-avatar>
@@ -84,24 +112,41 @@
             <!-- 3 -->
             <v-flex xs12 md4>
               <v-card class="card-content">
-                <v-card-title class="font-weight-bold subtitle-1" :style="{ color: info }">Upcoming</v-card-title>
+                <v-card-title
+                  class="font-weight-bold subtitle-1"
+                  :style="{ color: info }"
+                  >Upcoming</v-card-title
+                >
                 <v-card-text class="pt-0">
                   <!-- Draggable -->
                   <div class="draggable">
                     <draggable group="ITEMS" v-model="myList3">
-                      <div v-for="item in myList3" :key="item.id" class="drag-item">
+                      <div
+                        v-for="item in myList3"
+                        :key="item.id"
+                        class="drag-item"
+                      >
                         <div class="content">
-                          <v-checkbox v-model="item.checked" class="left" color="#e14eca"></v-checkbox>
+                          <v-checkbox
+                            v-model="item.checked"
+                            class="left"
+                            color="#e14eca"
+                          ></v-checkbox>
                           <v-chip
                             small
                             label
                             dark
                             class="right"
                             :style="{ background: item.chipColor }"
-                          >{{ item.chipText }}</v-chip>
+                            >{{ item.chipText }}</v-chip
+                          >
                         </div>
                         <div class="box">
-                          <h4 class="subtitle-1 grey--text text--lighten-3 mb-3">{{ item.text }}</h4>
+                          <h4
+                            class="subtitle-1 grey--text text--lighten-3 mb-3"
+                          >
+                            {{ item.text }}
+                          </h4>
                           <v-avatar class="mr-3" :size="avatarSize">
                             <img :src="item.img" />
                           </v-avatar>
@@ -237,20 +282,20 @@ export default {
     myList4() {
       return {
         get() {
-          return this.items2;
+          return this.items3;
         },
         set(value) {
-          this.items2 = value;
+          this.items3 = value;
         }
       };
     },
     myList5() {
       return {
         get() {
-          return this.items2;
+          return this.items4;
         },
         set(value) {
-          this.items2 = value;
+          this.items4 = value;
         }
       };
     }
@@ -266,10 +311,6 @@ export default {
   margin-bottom: 1.3rem;
   transition: all 0.2s;
 }
-/* .list-complete-enter,
-.list-complete-leave-active {
-  opacity: 0;
-} */
 
 #taskboard .v-chip {
   margin-top: 1.5rem;
@@ -291,6 +332,10 @@ export default {
   transition: all 0.2s;
 }
 
+#taskboard h4 {
+  font-weight: 500;
+}
+
 .layout input {
   width: 100%;
   padding: 10px 35px;
@@ -300,39 +345,5 @@ export default {
   outline: none;
   font-weight: 400;
   margin-bottom: 15px;
-}
-
-.layout input::placeholder,
-.layout textarea::placeholder {
-  font-size: 13px;
-}
-
-.layout input:focus,
-.layout textarea:focus {
-  border-color: #e14eca;
-  transition: all 0.4s;
-}
-
-.layout .fa-user {
-  position: absolute;
-  left: 28px;
-  top: 29px;
-  color: #ababab;
-}
-
-.layout .fa-envelope {
-  position: absolute;
-  left: 26px;
-  top: 89px;
-  color: #ababab;
-}
-
-.layout textarea {
-  width: 100%;
-  border: 1px solid #cecece;
-  outline: none;
-  padding: 16px 35px;
-  color: #4a4848;
-  font-weight: 400;
 }
 </style>

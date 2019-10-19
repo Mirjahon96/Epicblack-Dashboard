@@ -3,7 +3,7 @@
     <v-dialog v-model="dialog" dark persistent width="550">
       <template v-slot:activator="{ on }">
         <v-btn rounded dark v-on="on" class="purple-gradient">
-            <v-icon small class="mr-2">add</v-icon>Add New
+          <v-icon small class="mr-2">add</v-icon>Add New
         </v-btn>
       </template>
 
@@ -48,12 +48,14 @@
                     class="button-translate mt-3 mb-3 purple-gradient"
                     :loading="loading"
                     @click="loader = 'loading'"
-                  >Save</v-btn>
+                    >Save</v-btn
+                  >
                   <v-btn
                     dark
                     @click="dialog = false"
                     class="button-translate mt-3 mb-3 orange-gradient"
-                  >Cancel</v-btn>
+                    >Cancel</v-btn
+                  >
                 </slot>
               </v-form>
             </v-flex>
@@ -62,7 +64,11 @@
       </v-card>
     </v-dialog>
     <!-- Snackbar -->
-    <v-snackbar v-model="snackbar4" :color="background" :bottom="y === 'bottom'">
+    <v-snackbar
+      v-model="snackbar4"
+      :color="background"
+      :bottom="y === 'bottom'"
+    >
       <v-icon class="white--text mr-3">notification_important</v-icon>
       <slot name="snackbar-message">Task will be added soon..)</slot>
       <v-btn icon light @click="snackbar4 = false">

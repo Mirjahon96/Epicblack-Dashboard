@@ -4,7 +4,9 @@
       <v-layout row wrap>
         <v-flex>
           <div class="text-center mb-5">
-            <h2 class="headline font-weight-bold grey--text text--lighten-2">Timeline</h2>
+            <h2 class="headline font-weight-bold grey--text text--lighten-2">
+              Timeline
+            </h2>
           </div>
           <v-timeline light>
             <v-timeline-item
@@ -18,10 +20,14 @@
             >
               <v-card class="card-content" color="#27293d">
                 <v-card-title class="pb-0">
-                  <v-chip small :color="timeline.color" text-color="white">{{ timeline.chipTitle }}</v-chip>
+                  <v-chip small :color="timeline.color" text-color="white">{{
+                    timeline.chipTitle
+                  }}</v-chip>
                 </v-card-title>
                 <v-card-text>
-                  <p class="subtitle-1 mb-1" :style="{color: timeline.color}">{{ timeline.datetime}}</p>
+                  <p class="subtitle-1 mb-1" :style="{ color: timeline.color }">
+                    {{ timeline.datetime }}
+                  </p>
                   <p class="grey--text text--lighten-1">{{ timeline.text }}</p>
                 </v-card-text>
               </v-card>

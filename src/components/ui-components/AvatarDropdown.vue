@@ -7,7 +7,11 @@
         </v-avatar>
       </template>
       <v-list class="list">
-        <v-list-tile class="list-item" v-for="link in avatarItems" :key="link.id">
+        <v-list-tile
+          class="list-item"
+          v-for="link in avatarItems"
+          :key="link.id"
+        >
           <v-list-tile-title class="font">
             <router-link :to="link.route">{{ link.text }}</router-link>
           </v-list-tile-title>

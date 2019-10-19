@@ -59,10 +59,14 @@
               <slot name="form-footer">
                 <div class="form-footer">
                   <span>
-                    <router-link to="/register" class="link">Create account</router-link>
+                    <router-link to="/register" class="link"
+                      >Create account</router-link
+                    >
                   </span>
                   <span>
-                    <router-link to="/faqs" class="link">Need Help?</router-link>
+                    <router-link to="/faqs" class="link"
+                      >Need Help?</router-link
+                    >
                   </span>
                 </div>
               </slot>
@@ -75,13 +79,8 @@
 </template>
 
 <script>
-import ContactUs from "@/components/ContactUs";
 export default {
   name: "Login",
-  components: {
-    ContactUs
-  },
-
   data() {
     return {
       valid: true,
@@ -101,12 +100,13 @@ export default {
   methods: {
     submit() {
       if (this.$refs.form.validate()) {
+        this.valid;
       }
     }
   }
 };
 </script>
- <style scoped>
+<style scoped>
 .relative {
   position: relative;
 }
@@ -141,4 +141,3 @@ export default {
   margin: 0 !important;
 }
 </style>
- 

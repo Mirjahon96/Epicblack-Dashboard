@@ -6,7 +6,11 @@
           <v-form>
             <v-card class="card-content">
               <v-card-text>
-                <h5 class="title font-weight-light grey--text text--lighten-2 mb-2">Edit Profile</h5>
+                <h5
+                  class="title font-weight-light grey--text text--lighten-2 mb-2"
+                >
+                  Edit Profile
+                </h5>
               </v-card-text>
               <div class="px-3">
                 <!-- 1 -->
@@ -20,7 +24,9 @@
                         placeholder="Epicweb .Inc"
                         class="disabled"
                         disabled
-                        :class="[text.length > 6 ? 'green-border' : 'purple-border']"
+                        :class="[
+                          text.length > 6 ? 'green-border' : 'purple-border'
+                        ]"
                         v-model="text"
                       />
                     </div>
@@ -28,13 +34,23 @@
                   <v-flex xs12 md3>
                     <div>
                       <label for="username" class="d-block">User Name</label>
-                      <input type="text" id="username" placeholder="M96" required />
+                      <input
+                        type="text"
+                        id="username"
+                        placeholder="M96"
+                        required
+                      />
                     </div>
                   </v-flex>
                   <v-flex xs12 md4>
                     <div>
                       <label for="email" class="d-block">Email Address</label>
-                      <input type="email" id="email" placeholder="M96@gmail.com" required />
+                      <input
+                        type="email"
+                        id="email"
+                        placeholder="M96@gmail.com"
+                        required
+                      />
                     </div>
                   </v-flex>
                 </v-layout>
@@ -42,8 +58,15 @@
                 <v-layout row wrap>
                   <v-flex xs12 md6 v-for="field in fields2" :key="field.id">
                     <div>
-                      <label :for="field.id" class="d-block">{{ field.text }}</label>
-                      <input type="text" :id="field.id" :placeholder="field.placeholder" required />
+                      <label :for="field.id" class="d-block">{{
+                        field.text
+                      }}</label>
+                      <input
+                        type="text"
+                        :id="field.id"
+                        :placeholder="field.placeholder"
+                        required
+                      />
                     </div>
                   </v-flex>
                 </v-layout>
@@ -64,8 +87,14 @@
                 <v-layout row wrap>
                   <v-flex xs12 md4 v-for="field in fields4" :key="field.id">
                     <div>
-                      <label :for="field.id" class="d-block">{{ field.text }}</label>
-                      <input type="text" :id="field.id" :placeholder="field.placeholder" />
+                      <label :for="field.id" class="d-block">{{
+                        field.text
+                      }}</label>
+                      <input
+                        type="text"
+                        :id="field.id"
+                        :placeholder="field.placeholder"
+                      />
                     </div>
                   </v-flex>
                 </v-layout>
@@ -94,11 +123,14 @@
                     :loading="loading"
                     :disabled="loading"
                     @click="loader = 'loading'"
-                  >Submit</v-btn>
+                    >Submit</v-btn
+                  >
                 </div>
                 <!-- Snackbar -->
                 <v-snackbar v-model="snackbar2" :color="background">
-                  <v-icon class="white--text mr-3">notification_important</v-icon>Your profile is updated!
+                  <v-icon class="white--text mr-3"
+                    >notification_important</v-icon
+                  >Your profile is updated!
                   <v-btn icon @click="snackbar2 = false">
                     <v-icon class="white--text">close</v-icon>
                   </v-btn>

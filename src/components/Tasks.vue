@@ -5,19 +5,31 @@
         <v-flex xs12 sm12 md5>
           <v-card class="card-content">
             <v-card-text class="pb-1">
-              <p class="white-color d-inline font-weight-medium mr-3 text-uppercase">Tasks(5)</p>
+              <p
+                class="white-color d-inline font-weight-medium mr-3 text-uppercase"
+              >
+                Tasks(5)
+              </p>
               <span class="grey--text caption">Today</span>
 
-              <v-menu offset-y content-class="dropdown" transition="slide-x-transition">
+              <v-menu
+                offset-y
+                content-class="dropdown"
+                transition="slide-x-transition"
+              >
                 <template v-slot:activator="{ on }">
-                  <v-icon size="20px" class="right hover grey--text" v-on="on">settings</v-icon>
+                  <v-icon size="20px" class="right hover grey--text" v-on="on"
+                    >settings</v-icon
+                  >
                 </template>
                 <v-list>
-                  <v-list-tile class="list-item" v-for="item in todos" :key="item.id">
+                  <v-list-tile
+                    class="list-item"
+                    v-for="item in todos"
+                    :key="item.id"
+                  >
                     <v-list-tile-title class="font">
-                      {{
-                      item.title
-                      }}
+                      {{ item.title }}
                     </v-list-tile-title>
                   </v-list-tile>
                 </v-list>
@@ -34,7 +46,9 @@
                         <v-checkbox color="#e14eca"></v-checkbox>
                       </td>
                       <td>
-                        <p class="ma-0 white-color font-weight-medium">{{ item.name }}</p>
+                        <p class="ma-0 white-color font-weight-medium">
+                          {{ item.name }}
+                        </p>
                         <p class="ma-0 grey--text">{{ item.text }}</p>
                       </td>
 
@@ -45,7 +59,9 @@
                               <v-icon class="hover grey--text">edit</v-icon>
                             </v-btn>
                           </template>
-                          <span class="grey--text text--darken-2 caption">Edit task</span>
+                          <span class="grey--text text--darken-2 caption"
+                            >Edit task</span
+                          >
                         </v-tooltip>
                       </td>
                     </tr>

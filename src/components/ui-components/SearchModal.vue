@@ -1,13 +1,18 @@
 <template>
   <div>
-    <v-dialog v-model="dialog" width="500" class="dialog" transition="slide-y-transition">
+    <v-dialog
+      v-model="dialog"
+      width="500"
+      class="dialog"
+      transition="slide-y-transition"
+    >
       <template v-slot:activator="{ on }">
         <v-btn
           dark
           :class="{
-            'white--text' : white,
-            'grey--text text--darken-1' : grey
-            }"
+            'white--text': white,
+            'grey--text text--darken-1': grey
+          }"
           icon
           @click="dialogToggle()"
         >
@@ -17,7 +22,11 @@
 
       <v-card>
         <v-card-title>
-          <v-text-field color="#ff817a" prepend-icon="search" placeholder="SEARCH"></v-text-field>
+          <v-text-field
+            color="#ff817a"
+            prepend-icon="search"
+            placeholder="SEARCH"
+          ></v-text-field>
         </v-card-title>
       </v-card>
     </v-dialog>

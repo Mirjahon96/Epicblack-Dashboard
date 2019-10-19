@@ -5,16 +5,20 @@
         <v-flex x12 pt-2>
           <v-card class="card-content">
             <v-card-title class="text-center d-block pt-4">
-              <h2 class="headline white--text font-weight-light mb-2">Frequently Asked Questions</h2>
+              <h2 class="headline white--text font-weight-light mb-2">
+                Frequently Asked Questions
+              </h2>
               <p class="grey--text text--lighten-1">
-                Nisi praesentium similique totam odio obcaecati,
-                reprehenderit, dignissimos
-                <br />rem temporibus ea inventore alias! Beatae animi nemo ea tempora, temporibus laborum
-                <br />facilis ut!
+                Nisi praesentium similique totam odio obcaecati, reprehenderit,
+                dignissimos
+                <br />rem temporibus ea inventore alias! Beatae animi nemo ea
+                tempora, temporibus laborum <br />facilis ut!
               </p>
               <div class="faq-buttons">
                 <AppDialog purple>
-                  <span slot="button-text" class="text-capitalize">Email us your message</span>
+                  <span slot="button-text" class="text-capitalize"
+                    >Email us your message</span
+                  >
                   <v-flex xs12 slot="email-input">
                     <v-text-field
                       label="Email"
@@ -30,8 +34,11 @@
                 </AppDialog>
 
                 <AppDialog orange :img="require('@/assets/card-warning.png')">
-                  <span slot="button-text" class="text-capitalize">Send us a tweet</span>
+                  <span slot="button-text" class="text-capitalize"
+                    >Send us a tweet</span
+                  >
                   <span slot="form-text">Send a Tweet</span>
+                  <span slot="snackbar-message">Your tweet is sended!</span>
                 </AppDialog>
               </div>
             </v-card-title>
@@ -52,15 +59,26 @@
                           :key="question.id"
                         >
                           <template v-slot:header>
-                            <h4 class="heading white--text">{{ question.text }}</h4>
+                            <h4 class="heading white--text">
+                              {{ question.text }}
+                            </h4>
                           </template>
                           <div class="card-content pa-4">
-                            <p
-                              class="grey--text text--lighten-1"
-                            >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            <p
-                              class="grey--text text--lighten-1 mb-0"
-                            >Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.</p>
+                            <p class="grey--text text--lighten-1">
+                              Lorem Ipsum is simply dummy text of the printing
+                              and typesetting industry. Lorem Ipsum has been the
+                              industry's standard dummy text ever since the
+                              1500s, when an unknown printer took a galley of
+                              type and scrambled it to make a type specimen
+                              book.
+                            </p>
+                            <p class="grey--text text--lighten-1 mb-0">
+                              Anim pariatur cliche reprehenderit, enim eiusmod
+                              high life accusamus terry richardson ad squid. 3
+                              wolf moon officia aute, non cupidatat skateboard
+                              dolor brunch. Food truck quinoa nesciunt laborum
+                              eiusmod.
+                            </p>
                           </div>
                         </v-expansion-panel-content>
                       </v-expansion-panel>
@@ -76,15 +94,26 @@
                           :key="question.id"
                         >
                           <template v-slot:header>
-                            <h4 class="heading white--text">{{ question.text }}</h4>
+                            <h4 class="heading white--text">
+                              {{ question.text }}
+                            </h4>
                           </template>
                           <div class="card-content pa-4">
-                            <p
-                              class="grey--text text--lighten-1"
-                            >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            <p
-                              class="grey--text text--lighten-1 mb-0"
-                            >Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.</p>
+                            <p class="grey--text text--lighten-1">
+                              Lorem Ipsum is simply dummy text of the printing
+                              and typesetting industry. Lorem Ipsum has been the
+                              industry's standard dummy text ever since the
+                              1500s, when an unknown printer took a galley of
+                              type and scrambled it to make a type specimen
+                              book.
+                            </p>
+                            <p class="grey--text text--lighten-1 mb-0">
+                              Anim pariatur cliche reprehenderit, enim eiusmod
+                              high life accusamus terry richardson ad squid. 3
+                              wolf moon officia aute, non cupidatat skateboard
+                              dolor brunch. Food truck quinoa nesciunt laborum
+                              eiusmod.
+                            </p>
                           </div>
                         </v-expansion-panel-content>
                       </v-expansion-panel>

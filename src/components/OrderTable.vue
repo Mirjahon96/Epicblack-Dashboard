@@ -6,7 +6,9 @@
         <v-flex xs12 md12 class="pt-0 mb-2">
           <ManagementTable>
             <span slot="th1" class="pl-4">#</span>
-            <h3 slot="title" class="title white--text font-weight-light mb-1">Team</h3>
+            <h3 slot="title" class="title white--text font-weight-light mb-1">
+              Team
+            </h3>
             <span slot="th4">Since</span>
             <span slot="td4" class="grey--text text--lighten-1">2019</span>
           </ManagementTable>
@@ -17,7 +19,9 @@
       <v-layout row>
         <v-flex xs12 md12 class="pt-2 mb-2">
           <ManagementTable class="p-0 product-table">
-            <h3 slot="title" class="title white--text font-weight-light mb-1">Products</h3>
+            <h3 slot="title" class="title white--text font-weight-light mb-1">
+              Products
+            </h3>
             <span slot="th1" class="pl-3">#</span>
             <span slot="th2">Product Name</span>
             <span slot="th3">Type</span>
@@ -31,7 +35,11 @@
             <tr slot="tr" v-for="i in items" :key="i.id">
               <td class="pl-3">
                 <span slot="td1">
-                  <v-checkbox class="custom-checkbox" color="#e14eca" v-model="i.checked"></v-checkbox>
+                  <v-checkbox
+                    class="custom-checkbox"
+                    color="#e14eca"
+                    v-model="i.checked"
+                  ></v-checkbox>
                 </span>
               </td>
               <td>

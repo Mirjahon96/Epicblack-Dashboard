@@ -9,21 +9,50 @@
               <!-- 1 -->
               <v-flex xs12 md9>
                 <p class="grey--text mb-1">Total Shipments</p>
-                <h2 class="white--text headline font-weight-light mb-1">Performance</h2>
+                <h2 class="white--text headline font-weight-light mb-1">
+                  Performance
+                </h2>
               </v-flex>
               <!-- 2 -->
               <v-flex xs5 sm5 md3>
                 <div class="toggle d-flex">
-                  <button ref="accounts" class="accounts active" @click.prevent="toggleAccount">
-                    <v-icon size="18px" color="#e14eca" class="hidden-md-and-up icon">perm_identity</v-icon>
+                  <button
+                    ref="accounts"
+                    class="accounts active"
+                    @click.prevent="toggleAccount"
+                  >
+                    <v-icon
+                      size="18px"
+                      color="#e14eca"
+                      class="hidden-md-and-up icon"
+                      >perm_identity</v-icon
+                    >
                     <span class="hidden-sm-and-down">Accounts</span>
                   </button>
-                  <button ref="purchases" class="purchases" @click="togglePurchase">
-                    <v-icon size="18px" color="#e14eca" class="hidden-md-and-up icon">card_giftcard</v-icon>
+                  <button
+                    ref="purchases"
+                    class="purchases"
+                    @click="togglePurchase"
+                  >
+                    <v-icon
+                      size="18px"
+                      color="#e14eca"
+                      class="hidden-md-and-up icon"
+                      >card_giftcard</v-icon
+                    >
                     <span class="hidden-sm-and-down">Purchases</span>
                   </button>
-                  <button ref="sessions" class="sessions" @click="toggleSession">
-                    <v-icon size="18px" color="#e14eca" class="hidden-md-and-up icon">touch_app</v-icon>
+                  <button
+                    ref="sessions"
+                    class="sessions"
+                    @click="toggleSession"
+                  >
+                    <v-icon
+                      size="18px"
+                      color="#e14eca"
+                      class="hidden-md-and-up icon"
+                      >touch_app</v-icon
+                    >
                     <span class="hidden-sm-and-down">Sessions</span>
                   </button>
                 </div>

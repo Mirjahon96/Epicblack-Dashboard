@@ -6,8 +6,14 @@
           <v-card class="card-content">
             <v-card-text>
               <p class="grey--text mb-1">{{ allChart.text }}</p>
-              <v-icon class="mr-2 medium" :style="{ color: allChart.iconColor }">{{ allChart.icon }}</v-icon>
-              <h2 class="white--text d-inline font-weight-light">{{ allChart.number }}</h2>
+              <v-icon
+                class="mr-2 medium"
+                :style="{ color: allChart.iconColor }"
+                >{{ allChart.icon }}</v-icon
+              >
+              <h2 class="white--text d-inline font-weight-light">
+                {{ allChart.number }}
+              </h2>
             </v-card-text>
             <apexchart
               width="100%"
@@ -110,7 +116,6 @@ export default {
           iconColor: "#1d8cf8",
 
           chartOptions: {
-            // colors: ["#1d8cf8"],
             fill: {
               colors: ["#1d8cf8"]
             },
@@ -218,7 +223,7 @@ export default {
           },
           series: [
             {
-              name: "My first dataset",
+              name: "Completed Tasks",
               data: [20, 70, 40, 120, 90]
             }
           ]
@@ -230,8 +235,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.card-content {
-  background: #27293d;
-}
-</style>
+<style scoped></style>

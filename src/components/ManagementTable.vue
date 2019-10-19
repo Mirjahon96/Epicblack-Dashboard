@@ -237,7 +237,7 @@ th {
   vertical-align: middle;
   content: "";
   top: 30px;
-  left: 25px;
+  left: 26px;
   color: #fff;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;

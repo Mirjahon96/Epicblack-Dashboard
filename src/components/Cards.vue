@@ -26,14 +26,10 @@
             </div>
             <v-card-actions>
               <v-icon small class="grey--text lighten-2 ml-1">
-                {{
-                card.bottomIcon
-                }}
+                {{ card.bottomIcon }}
               </v-icon>
               <span class="grey--text lighten-2 ml-2">
-                {{
-                card.bottomText
-                }}
+                {{ card.bottomText }}
               </span>
             </v-card-actions>
           </v-card>

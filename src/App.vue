@@ -7,7 +7,7 @@
     <v-content>
       <AppSidebar v-if="showMenu" />
       <transition name="fade" mode="out-in">
-      <router-view />
+        <router-view />
       </transition>
     </v-content>
     <!-- Footer -->
@@ -44,5 +44,4 @@ export default {
 };
 </script>
 
-<style src="@/global-styles/main.css">
-</style>
+<style src="@/global-styles/main.css"></style>

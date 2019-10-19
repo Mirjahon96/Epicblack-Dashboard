@@ -6,7 +6,11 @@
           rounded
           dark
           v-on="on"
-          :class="{'purple-gradient' : purple, 'orange-gradient' : orange, 'blue-gradient' : blue}"
+          :class="{
+            'purple-gradient': purple,
+            'orange-gradient': orange,
+            'blue-gradient': blue
+          }"
         >
           <slot name="button-text">Send Message</slot>
         </v-btn>
@@ -14,7 +18,9 @@
 
       <v-card>
         <img :src="img" />
-        <v-card-title class="headline relative font-weight-medium white--text mb-2">
+        <v-card-title
+          class="headline relative font-weight-medium white--text mb-2"
+        >
           <slot name="form-text">Send Message</slot>
           <v-spacer></v-spacer>
           <v-btn icon>
@@ -64,11 +70,15 @@
                     block
                     large
                     class="button-translate mt-3 mb-3 button-rounded"
-                    :class="{'purple-gradient' : purple, 'orange-gradient' : orange}"
+                    :class="{
+                      'purple-gradient': purple,
+                      'orange-gradient': orange
+                    }"
                     :loading="loading"
                     @click="loader = 'loading'"
                     v-on:click="submit()"
-                  >Send</v-btn>
+                    >Send</v-btn
+                  >
                 </slot>
               </v-form>
             </v-flex>
@@ -152,6 +162,7 @@ export default {
   methods: {
     submit() {
       if (this.$refs.form.validate()) {
+        this.valid;
       }
     }
   }

@@ -10,7 +10,9 @@
             <img :src="comment.img" />
           </v-avatar>
           <div class="pr-3">
-            <h4 class="subtitle-1 grey--text text--lighten-3 mb-2">{{ comment.name }}</h4>
+            <h4 class="subtitle-1 grey--text text--lighten-3 mb-2">
+              {{ comment.name }}
+            </h4>
             <p class="subtitle-1">
               <a>{{ comment.email }}</a>
               {{ comment.msg }}

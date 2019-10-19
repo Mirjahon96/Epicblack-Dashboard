@@ -10,9 +10,15 @@
           <v-avatar class="click" :size="avatarSize">
             <img src="../assets/tania.jpg" alt="avatar" class="avatar" />
           </v-avatar>
-          <h5 class="body-1 font-weight-medium grey--text text--lighten-2 mb-2">Tania Mike</h5>
-          <h3 class="font-weight-light grey--text text--lighten-1 mb-4">Ceo/Co-Founder</h3>
-          <div class="font-weight-light grey--text text--lighten-1 text-left mb-4">
+          <h5 class="body-1 font-weight-medium grey--text text--lighten-2 mb-2">
+            Tania Mike
+          </h5>
+          <h3 class="font-weight-light grey--text text--lighten-1 mb-4">
+            Ceo/Co-Founder
+          </h3>
+          <div
+            class="font-weight-light grey--text text--lighten-1 text-left mb-4"
+          >
             <p>
               Do not be scared of the truth because we need to restart the human
               foundation in truth And I love you like Kanye loves Kanye I love

@@ -5,14 +5,20 @@
       <v-card-text>
         <div class="g-autocomplete">
           <gmap-autocomplete @place_changed="setPlace"></gmap-autocomplete>
-          <v-btn dark class="blue-gradient button-translate" @click="addMarker">Add</v-btn>
+          <v-btn dark class="blue-gradient button-translate" @click="addMarker"
+            >Add</v-btn
+          >
         </div>
-        <gmap-map :center="center" :zoom="12" style="width:100%;  height: 400px;">
+        <gmap-map
+          :center="center"
+          :zoom="12"
+          style="width:100%;  height: 400px;"
+        >
           <gmap-marker
             :key="index"
             v-for="(m, index) in markers"
             :position="m.position"
-            @click="center=m.position"
+            @click="center = m.position"
           ></gmap-marker>
         </gmap-map>
       </v-card-text>

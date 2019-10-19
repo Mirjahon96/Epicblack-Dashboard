@@ -1,9 +1,11 @@
 <template>
-  <div id="footer" :class="{ 'margin': margin }">
+  <div id="footer" :class="{ margin: margin }">
     <v-container grid-list-md fluid pt-1>
       <footer class="py-3 px-2 transparent">
         <div class="footer-content">
-          <p class="ma-0 white--text text-uppercase font-weight-light body-2">Epicblack Dashboard</p>
+          <p class="ma-0 white--text text-uppercase font-weight-light body-2">
+            Epicblack Dashboard
+          </p>
           <div class="white--text caption">
             &copy; 2019, cloned with
             <v-icon small color="red" class="pr-1">favorite</v-icon>by

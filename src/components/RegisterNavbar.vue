@@ -1,7 +1,9 @@
 <template>
   <div id="reg-navbar" class="hidden-sm-and-down">
     <v-toolbar class="toolbar">
-      <v-toolbar-title class="white--text heading font-weight-light">{{ this.$route.name }}</v-toolbar-title>
+      <v-toolbar-title class="white--text heading font-weight-light">{{
+        this.$route.name
+      }}</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>
         <v-btn flat v-for="link in links" :key="link.id">

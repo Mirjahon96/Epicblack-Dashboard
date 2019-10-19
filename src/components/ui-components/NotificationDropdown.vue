@@ -8,15 +8,19 @@
             dark
             v-on="on"
             :class="{
-            'white--text' : white,
-            'black--text' : black
+              'white--text': white,
+              'black--text': black
             }"
           >
             <v-icon>notification_important</v-icon>
           </v-btn>
         </template>
         <v-list class="list">
-          <v-list-tile class="list-item" v-for="item in notificationItems" :key="item.id">
+          <v-list-tile
+            class="list-item"
+            v-for="item in notificationItems"
+            :key="item.id"
+          >
             <v-list-tile-title class="font">{{ item.text }}</v-list-tile-title>
           </v-list-tile>
         </v-list>

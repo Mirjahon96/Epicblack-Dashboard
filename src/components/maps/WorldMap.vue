@@ -6,21 +6,18 @@
 
 <script>
 window.jQuery = require("jquery");
-var $ = window.jQuery;
+var mapVue = window.jQuery;
 require("jvectormap");
 
 require("@/lib/jquery-jvectormap-world-mill.js");
 
 export default {
-  data() {
-    return {};
-  },
   mounted() {
     this.drawMap();
   },
   methods: {
     drawMap() {
-      $(".world-map").vectorMap({
+      mapVue(".world-map").vectorMap({
         map: "world_mill",
         zoomOnScroll: false,
         backgroundColor: "transparent",

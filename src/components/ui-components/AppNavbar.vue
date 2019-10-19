@@ -2,7 +2,12 @@
   <div id="navbar" class="hidden-sm-and-down">
     <v-toolbar class="toolbar" height="64px">
       <!-- Sidebar Toggler -->
-      <v-tooltip right z-index="5" min-width="110px" content-class="tooltip-content">
+      <v-tooltip
+        right
+        z-index="5"
+        min-width="110px"
+        content-class="tooltip-content"
+      >
         <template v-slot:activator="{ on }">
           <v-toolbar-side-icon
             v-on="on"
@@ -13,7 +18,9 @@
         </template>
         <span>Sidebar</span>
       </v-tooltip>
-      <v-toolbar-title class="white--text heading font-weight-light">{{ this.$route.name }}</v-toolbar-title>
+      <v-toolbar-title class="white--text heading font-weight-light">
+        {{ this.$route.name }}
+      </v-toolbar-title>
       <v-spacer></v-spacer>
 
       <!-- Snackbar -->
@@ -91,7 +98,7 @@ export default {
   vertical-align: middle;
   content: "";
   top: 0px;
-  left: -34px;
+  left: -31px;
   color: #fff;
   border-top: 5px solid transparent;
   border-right: 5px solid;

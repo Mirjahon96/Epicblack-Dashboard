@@ -86,6 +86,5 @@ export default new Router({
       name: "faqs",
       component: Faqs
     }
-
   ]
 });

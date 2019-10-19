@@ -9,13 +9,15 @@
                 <img src="@/assets/sarah.jpg" alt />
               </v-avatar>
               <div class="avatar-text">
-                <h4 class="title mb-1 grey--text text--lighten-3">Sarah Anderson</h4>
+                <h4 class="title mb-1 grey--text text--lighten-3">
+                  Sarah Anderson
+                </h4>
                 <v-chip small label dark class="red lighten-1">Urgent</v-chip>
               </div>
               <div class="grey--text text--lighten-1">
-                <h3
-                  class="heading-4 grey--text text--lighten-3 mt-4 mb-3"
-                >Code HTML email template for welcome email</h3>
+                <h3 class="heading-4 grey--text text--lighten-3 mt-4 mb-3">
+                  Code HTML email template for welcome email
+                </h3>
                 <p>
                   At vero eos et accusamus et iusto odio dignissimos ducimus qui
                   blanditiis praesentium voluptatum deleniti atque corrupti quos
@@ -33,12 +35,18 @@
               <!-- 2 -->
               <v-layout row wrap>
                 <v-flex xs12 md6>
-                  <h3 class="subtitle-1 grey--text text--lighten-3 mb-2">Start Date</h3>
+                  <h3 class="subtitle-1 grey--text text--lighten-3 mb-2">
+                    Start Date
+                  </h3>
                   <p class="grey--text text--lighten-1">7 July 2019 14:00 PM</p>
                 </v-flex>
                 <v-flex xs12 md6>
-                  <h3 class="subtitle-1 grey--text text--lighten-3 mb-2">Due Date</h3>
-                  <p class="grey--text text--lighten-1">15 September 2019 12:00 PM</p>
+                  <h3 class="subtitle-1 grey--text text--lighten-3 mb-2">
+                    Due Date
+                  </h3>
+                  <p class="grey--text text--lighten-1">
+                    15 September 2019 12:00 PM
+                  </p>
                 </v-flex>
               </v-layout>
             </v-card-title>
@@ -51,9 +59,16 @@
 
               <div class="mb-4">
                 <!-- Team Members -->
-                <h3 class="subtitle-1 grey--text text--lighten-3 mb-2">Assign to</h3>
+                <h3 class="subtitle-1 grey--text text--lighten-3 mb-2">
+                  Assign to
+                </h3>
                 <router-link to="/team">
-                  <v-avatar class="mr-2" :size="teamSize" v-for="team in teams" :key="team.id">
+                  <v-avatar
+                    class="mr-2"
+                    :size="teamSize"
+                    v-for="team in teams"
+                    :key="team.id"
+                  >
                     <img :src="team.img" alt="team" />
                   </v-avatar>
                 </router-link>
@@ -64,7 +79,9 @@
 
               <!-- Attached files -->
               <div class="mb-3">
-                <h3 class="subtitle-1 grey--text text--lighten-3 mb-2">Attached Files</h3>
+                <h3 class="subtitle-1 grey--text text--lighten-3 mb-2">
+                  Attached Files
+                </h3>
                 <v-avatar
                   class="files mr-2"
                   :size="fileSize"

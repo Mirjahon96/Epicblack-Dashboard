@@ -39,7 +39,6 @@ const mutations = {
   //   }
   // },
   navbarToggle() {
-    const important = '!important'
     if (state.navbar === true) {
       state.navbar = false;
       document.querySelector(".sidebar").style.width = "250px";
@@ -49,7 +48,6 @@ const mutations = {
         "translate(15px) scale(1, 1)";
       document.querySelector(".nav-text").style.transition = "all 0.3s linear";
       document.querySelector(".divider-1").style.width = "90%";
-
     } else {
       state.navbar = true;
       document.querySelector(".sidebar").style.width = "80px";
@@ -58,14 +56,12 @@ const mutations = {
         "translate(-25px) scale(1, 1)";
       document.querySelector(".nav-text").style.transition = "all 0.3s linear";
       // document.querySelector(".divider-1").style.width = "50px";
-
     }
   },
 
   snackbarToggle() {
     if (state.snackbar === false) {
       state.snackbar = true;
-
     } else {
       state.snackbar = false;
     }

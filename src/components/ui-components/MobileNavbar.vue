@@ -3,13 +3,23 @@
     <v-toolbar flat class="toolbar" height="64px" v-if="showRegisterNavbar">
       <!-- Sidebar Toggler -->
       <v-btn icon @click="drawer = !drawer" class="z-index ml-0">
-        <v-icon :class="{'grey--text text--darken-1' : toolbar, 'white--text' : !toolbar}">menu</v-icon>
+        <v-icon
+          :class="{
+            'grey--text text--darken-1': toolbar,
+            'white--text': !toolbar
+          }"
+          >menu</v-icon
+        >
       </v-btn>
 
       <v-toolbar-title
         class="heading font-weight-light z-index ml-0"
-        :class="{'grey--text text--darken-3' : toolbar, 'white--text' : !toolbar}"
-      >{{ this.$route.name }}</v-toolbar-title>
+        :class="{
+          'grey--text text--darken-3': toolbar,
+          'white--text': !toolbar
+        }"
+        >{{ this.$route.name }}
+      </v-toolbar-title>
 
       <v-slide-y-transition>
         <div class="list" v-if="toolbar">
@@ -24,7 +34,9 @@
                 <template v-slot:header>
                   <div class="panel-content">
                     <v-icon light class="mr-2">notification_important</v-icon>
-                    <span class="text-uppercase font-weight-light">New notifications</span>
+                    <span class="text-uppercase font-weight-light"
+                      >New notifications</span
+                    >
                   </div>
                 </template>
                 <v-list>
@@ -33,7 +45,9 @@
                     v-for="(notification, index) in notificationItems"
                     :key="index"
                   >
-                    <v-list-tile-title class="font pl-4">{{notification.text }}</v-list-tile-title>
+                    <v-list-tile-title class="font pl-4">{{
+                      notification.text
+                    }}</v-list-tile-title>
                   </v-list-tile>
                 </v-list>
               </v-expansion-panel-content>
@@ -44,7 +58,9 @@
                 <template v-slot:header>
                   <div class="panel-content">
                     <v-icon light class="mr-2">exit_to_app</v-icon>
-                    <span class="text-uppercase font-weight-light">Log Out</span>
+                    <span class="text-uppercase font-weight-light"
+                      >Log Out</span
+                    >
                   </div>
                 </template>
                 <v-list>
@@ -54,7 +70,9 @@
                     :key="index"
                   >
                     <v-list-tile-title class="font pl-4">
-                      <router-link :to="avatar.route">{{ avatar.text }}</router-link>
+                      <router-link :to="avatar.route">{{
+                        avatar.text
+                      }}</router-link>
                     </v-list-tile-title>
                   </v-list-tile>
                 </v-list>
@@ -67,7 +85,13 @@
       <v-spacer></v-spacer>
 
       <v-btn icon @click="openToolbar()" class="z-index">
-        <v-icon :class="{'grey--text text--darken-2' : toolbar, 'white--text' : !toolbar}">more_vert</v-icon>
+        <v-icon
+          :class="{
+            'grey--text text--darken-2': toolbar,
+            'white--text': !toolbar
+          }"
+          >more_vert</v-icon
+        >
       </v-btn>
     </v-toolbar>
 
@@ -90,9 +114,7 @@
             <router-link :to="link.route" class="grey--text link">
               <v-icon class="white--text pr-2 pb-1">{{ link.icon }}</v-icon>
               <span class="white--text text-uppercase caption">
-                {{
-                link.text
-                }}
+                {{ link.text }}
               </span>
             </router-link>
           </v-list-tile-title>
@@ -105,13 +127,21 @@
       <v-toolbar flat class="toolbar" height="64px">
         <v-toolbar-title
           class="heading font-weight-light z-index ml-0"
-          :class="{'grey--text text--darken-3' : toolbar, 'white--text' : !toolbar}"
-        >{{ this.$route.name }}</v-toolbar-title>
+          :class="{
+            'grey--text text--darken-3': toolbar,
+            'white--text': !toolbar
+          }"
+          >{{ this.$route.name }}</v-toolbar-title
+        >
 
         <v-slide-y-transition>
           <div class="list" v-if="toolbar">
             <v-list class="pt-5">
-              <v-list-tile-title class="px-3 mb-3 mt-1" v-for="link in links2" :key="link.id">
+              <v-list-tile-title
+                class="px-3 mb-3 mt-1"
+                v-for="link in links2"
+                :key="link.id"
+              >
                 <router-link :to="link.route" class="link font-weight-light">
                   <v-icon class="mr-1">{{ link.icon }}</v-icon>
                   {{ link.text }}
@@ -125,8 +155,12 @@
 
         <v-btn icon @click="openToolbar()" class="z-index">
           <v-icon
-            :class="{'grey--text text--darken-2' : toolbar, 'white--text' : !toolbar}"
-          >more_vert</v-icon>
+            :class="{
+              'grey--text text--darken-2': toolbar,
+              'white--text': !toolbar
+            }"
+            >more_vert</v-icon
+          >
         </v-btn>
       </v-toolbar>
     </div>
@@ -282,4 +316,3 @@ export default {
   align-items: center !important;
 }
 </style>
-

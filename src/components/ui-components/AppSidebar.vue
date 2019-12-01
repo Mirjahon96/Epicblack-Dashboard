@@ -18,7 +18,9 @@
           <v-list-tile-title>
             <router-link :to="link.route" class="link">
               <v-icon class="white--text">{{ link.icon }}</v-icon>
-              <span :class="{ 'nav-text': navbar, 'nav-text2': !navbar }">{{ link.text }}</span>
+              <span :class="{ 'nav-text': navbar, 'nav-text2': !navbar }">{{
+                link.text
+              }}</span>
             </router-link>
           </v-list-tile-title>
         </v-list-tile>

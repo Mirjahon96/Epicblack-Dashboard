@@ -5,9 +5,7 @@
         <v-layout row wrap>
           <v-flex xs12 sm12 lg6>
             <v-card-text class="pb-0">
-              <p class="white-color font-weight-light mb-1">
-                Global Sales by Top Locations
-              </p>
+              <p class="white-color font-weight-light mb-1">Global Sales by Top Locations</p>
               <p class="grey--text caption">All Products That Were Shipped</p>
             </v-card-text>
             <!-- Table -->
@@ -18,12 +16,7 @@
                     <tr v-for="country in countries" :key="country.id">
                       <td>
                         <v-img width="23px" height="17px">
-                          <img
-                            style="width: 100%"
-                            class
-                            :src="country.img"
-                            alt="countries"
-                          />
+                          <img style="width: 100%" v-lazy="country.img" alt="countries" />
                         </v-img>
                       </td>
                       <td>

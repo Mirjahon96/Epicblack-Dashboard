@@ -6,6 +6,7 @@ import store from "./store";
 import Vuetify from "vuetify";
 import VueApexCharts from "vue-apexcharts";
 import * as VueGoogleMaps from "vue2-google-maps";
+import VueLazyload from 'vue-lazyload';
 
 // Import Css
 require("@/global-styles/main.css");
@@ -15,6 +16,8 @@ Vue.config.productionTip = false;
 Vue.use(Vuetify);
 
 Vue.use(VueApexCharts);
+
+Vue.use(VueLazyload)
 
 Vue.use(VueGoogleMaps, {
   load: {

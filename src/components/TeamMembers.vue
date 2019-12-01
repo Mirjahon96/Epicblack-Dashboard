@@ -2,61 +2,37 @@
   <div id="team-members">
     <v-container fluid grid-list-xl pt-0>
       <v-layout row wrap>
-        <v-flex
-          xs12
-          sm6
-          md4
-          v-for="team in teamMembers"
-          :key="team.id"
-          class="pt-2"
-        >
+        <v-flex xs12 sm6 md4 v-for="team in teamMembers" :key="team.id" class="pt-2">
           <v-card class="card-content">
             <v-card-text class="px-4">
               <div class="text-center mb-2">
                 <v-avatar class="click" :size="avatarSize">
-                  <img :src="team.img" alt="avatar" class="avatar" />
+                  <img v-lazy="team.img" alt="avatar" class="avatar" />
                 </v-avatar>
               </div>
-              <div
-                class="font-weight-light grey--text text--lighten-1 text-center mb-4"
-              >
+              <div class="font-weight-light grey--text text--lighten-1 text-center mb-4">
                 <p>{{ team.text }}</p>
               </div>
               <div class="contacts">
                 <p>
                   <strong class="grey--text">Full Name:</strong>
-                  <span
-                    class="grey--text text--lighten-1 ml-2 font-weight-light"
-                    >{{ team.name }}</span
-                  >
+                  <span class="grey--text text--lighten-1 ml-2 font-weight-light">{{ team.name }}</span>
                 </p>
                 <p>
                   <strong class="grey--text">Job:</strong>
-                  <span
-                    class="grey--text text--lighten-1 ml-2 font-weight-light"
-                    >{{ team.job }}</span
-                  >
+                  <span class="grey--text text--lighten-1 ml-2 font-weight-light">{{ team.job }}</span>
                 </p>
                 <p>
                   <strong class="grey--text">Mobile:</strong>
-                  <span
-                    class="grey--text text--lighten-1 ml-2 font-weight-light"
-                    >{{ team.mobile }}</span
-                  >
+                  <span class="grey--text text--lighten-1 ml-2 font-weight-light">{{ team.mobile }}</span>
                 </p>
                 <p>
                   <strong class="grey--text">Email:</strong>
-                  <span
-                    class="grey--text text--lighten-1 ml-2 font-weight-light"
-                    >{{ team.email }}</span
-                  >
+                  <span class="grey--text text--lighten-1 ml-2 font-weight-light">{{ team.email }}</span>
                 </p>
                 <p>
                   <strong class="grey--text">Country:</strong>
-                  <span
-                    class="grey--text text--lighten-1 ml-2 font-weight-light"
-                    >{{ team.country }}</span
-                  >
+                  <span class="grey--text text--lighten-1 ml-2 font-weight-light">{{ team.country }}</span>
                 </p>
               </div>
 

@@ -2,9 +2,7 @@
   <div id="shopping-table">
     <v-card class="card-content">
       <v-card-title>
-        <h3 class="title white--text font-weight-light mb-1">
-          Shopping Product
-        </h3>
+        <h3 class="title white--text font-weight-light mb-1">Shopping Product</h3>
       </v-card-title>
       <v-card-text>
         <div class="table-manage">
@@ -42,7 +40,7 @@
                 <td class="text-left pl-3 pr-5">
                   <slot name="td1">
                     <div class="d-flex">
-                      <img :src="product.img" />
+                      <img v-lazy="product.img" />
                     </div>
                   </slot>
                 </td>
@@ -102,16 +100,10 @@
                     <v-tooltip top content-class="tooltip-content">
                       <template v-slot:activator="{ on }">
                         <v-btn small icon v-on="on" class="ma-0">
-                          <v-icon
-                            size="22px"
-                            class="hover pink--text text--accent-2"
-                            >clear</v-icon
-                          >
+                          <v-icon size="22px" class="hover pink--text text--accent-2">clear</v-icon>
                         </v-btn>
                       </template>
-                      <span class="grey--text text--darken-2 caption"
-                        >Remove</span
-                      >
+                      <span class="grey--text text--darken-2 caption">Remove</span>
                     </v-tooltip>
                   </slot>
                 </td>
@@ -130,11 +122,7 @@
             </div>
           </div>
           <div class="text-right">
-            <v-btn
-              large
-              color="primary"
-              class="button-rounded button-translate px-5"
-            >
+            <v-btn large color="primary" class="button-rounded button-translate px-5">
               Complete Purchase
               <v-icon small class="ml-2">arrow_forward_ios</v-icon>
             </v-btn>

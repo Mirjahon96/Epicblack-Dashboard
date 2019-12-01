@@ -10,23 +10,14 @@
                 <v-card-title
                   class="font-weight-bold subtitle-1"
                   :style="{ color: warning }"
-                  >Completed</v-card-title
-                >
+                >Completed</v-card-title>
                 <v-card-text class="pt-0">
                   <!-- Draggable -->
                   <div class="draggable">
                     <draggable group="ITEMS" v-model="myList">
-                      <div
-                        v-for="item in myList"
-                        :key="item.id"
-                        class="drag-item"
-                      >
+                      <div v-for="item in myList" :key="item.id" class="drag-item">
                         <div class="content">
-                          <v-checkbox
-                            v-model="item.checked"
-                            class="left"
-                            color="#e14eca"
-                          ></v-checkbox>
+                          <v-checkbox v-model="item.checked" class="left" color="#e14eca"></v-checkbox>
                           <v-chip
                             small
                             ripple="true"
@@ -34,17 +25,12 @@
                             dark
                             class="right"
                             :style="{ background: item.chipColor }"
-                            >{{ item.chipText }}</v-chip
-                          >
+                          >{{ item.chipText }}</v-chip>
                         </div>
                         <div class="box">
-                          <h4
-                            class="subtitle-1 grey--text text--lighten-3 mb-3"
-                          >
-                            {{ item.text }}
-                          </h4>
+                          <h4 class="subtitle-1 grey--text text--lighten-3 mb-3">{{ item.text }}</h4>
                           <v-avatar class="mr-3" :size="avatarSize">
-                            <img :src="item.img" />
+                            <img v-lazy="item.img" />
                           </v-avatar>
                           <v-icon class="mr-3">list</v-icon>
                           <v-icon>comment</v-icon>
@@ -63,40 +49,26 @@
                 <v-card-title
                   class="font-weight-bold subtitle-1"
                   :style="{ color: success }"
-                  >In Progress</v-card-title
-                >
+                >In Progress</v-card-title>
                 <v-card-text class="pt-0">
                   <!-- Draggable -->
                   <div class="draggable">
                     <draggable group="ITEMS" v-model="myList2">
-                      <div
-                        v-for="item in myList2"
-                        :key="item.id"
-                        class="drag-item"
-                      >
+                      <div v-for="item in myList2" :key="item.id" class="drag-item">
                         <div class="content">
-                          <v-checkbox
-                            v-model="item.checked"
-                            class="left"
-                            color="#e14eca"
-                          ></v-checkbox>
+                          <v-checkbox v-model="item.checked" class="left" color="#e14eca"></v-checkbox>
                           <v-chip
                             small
                             label
                             dark
                             class="right"
                             :style="{ background: item.chipColor }"
-                            >{{ item.chipText }}</v-chip
-                          >
+                          >{{ item.chipText }}</v-chip>
                         </div>
                         <div class="box">
-                          <h4
-                            class="subtitle-1 grey--text text--lighten-3 mb-3"
-                          >
-                            {{ item.text }}
-                          </h4>
+                          <h4 class="subtitle-1 grey--text text--lighten-3 mb-3">{{ item.text }}</h4>
                           <v-avatar class="mr-3" :size="avatarSize">
-                            <img :src="item.img" />
+                            <img v-lazy="item.img" />
                           </v-avatar>
                           <v-icon class="mr-3">list</v-icon>
                           <v-icon>comment</v-icon>
@@ -112,43 +84,26 @@
             <!-- 3 -->
             <v-flex xs12 md4>
               <v-card class="card-content">
-                <v-card-title
-                  class="font-weight-bold subtitle-1"
-                  :style="{ color: info }"
-                  >Upcoming</v-card-title
-                >
+                <v-card-title class="font-weight-bold subtitle-1" :style="{ color: info }">Upcoming</v-card-title>
                 <v-card-text class="pt-0">
                   <!-- Draggable -->
                   <div class="draggable">
                     <draggable group="ITEMS" v-model="myList3">
-                      <div
-                        v-for="item in myList3"
-                        :key="item.id"
-                        class="drag-item"
-                      >
+                      <div v-for="item in myList3" :key="item.id" class="drag-item">
                         <div class="content">
-                          <v-checkbox
-                            v-model="item.checked"
-                            class="left"
-                            color="#e14eca"
-                          ></v-checkbox>
+                          <v-checkbox v-model="item.checked" class="left" color="#e14eca"></v-checkbox>
                           <v-chip
                             small
                             label
                             dark
                             class="right"
                             :style="{ background: item.chipColor }"
-                            >{{ item.chipText }}</v-chip
-                          >
+                          >{{ item.chipText }}</v-chip>
                         </div>
                         <div class="box">
-                          <h4
-                            class="subtitle-1 grey--text text--lighten-3 mb-3"
-                          >
-                            {{ item.text }}
-                          </h4>
+                          <h4 class="subtitle-1 grey--text text--lighten-3 mb-3">{{ item.text }}</h4>
                           <v-avatar class="mr-3" :size="avatarSize">
-                            <img :src="item.img" />
+                            <img v-lazy="item.img" />
                           </v-avatar>
                           <v-icon class="mr-3">list</v-icon>
                           <v-icon>comment</v-icon>

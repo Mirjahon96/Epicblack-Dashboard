@@ -9,15 +9,16 @@
           <v-hover v-slot:default="{ hover }">
             <v-card class="card-content" :elevation="hover ? 6 : 2">
               <v-card-text>
-                <v-chip class="right" small dark :color="project.color">{{
+                <v-chip class="right" small dark :color="project.color">
+                  {{
                   project.chipTitle
-                }}</v-chip>
-                <h3 class="title hoverTitle font-weight-light mb-2">
-                  {{ project.title }}
-                </h3>
-                <p class="text-uppercase" :style="{ color: project.color }">
-                  {{ project.projectTitle }}
-                </p>
+                  }}
+                </v-chip>
+                <h3 class="title hoverTitle font-weight-light mb-2">{{ project.title }}</h3>
+                <p
+                  class="text-uppercase"
+                  :style="{ color: project.color }"
+                >{{ project.projectTitle }}</p>
                 <p class="grey--text text--lighten-1 mb-3">
                   {{ project.pText }}
                   <a>View More</a>
@@ -35,14 +36,10 @@
 
                 <div class="team-members d-inline-flex align-center mt-3">
                   <h3 class="mr-3 body-2 font-weight-regular">Team:</h3>
-                  <v-avatar
-                    :size="avatarSize"
-                    v-for="avatar in project.images"
-                    :key="avatar.id"
-                  >
+                  <v-avatar :size="avatarSize" v-for="avatar in project.images" :key="avatar.id">
                     <v-tooltip top content-class="tooltip-content">
                       <template v-slot:activator="{ on }">
-                        <img :src="avatar.img" v-on="on" alt="team" />
+                        <img v-lazy="avatar.img" v-on="on" alt="team" />
                       </template>
                       <span>{{ avatar.name }}</span>
                     </v-tooltip>
@@ -54,14 +51,9 @@
                   <span
                     class="font-weight-medium"
                     :style="{ color: project.color }"
-                    >{{ project.progress }}</span
-                  >
+                  >{{ project.progress }}</span>
                 </div>
-                <v-progress-linear
-                  :value="project.progress"
-                  height="6"
-                  :color="project.color"
-                ></v-progress-linear>
+                <v-progress-linear :value="project.progress" height="6" :color="project.color"></v-progress-linear>
               </v-card-text>
             </v-card>
           </v-hover>

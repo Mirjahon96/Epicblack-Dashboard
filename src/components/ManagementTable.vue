@@ -41,7 +41,7 @@
                 <td class="pl-3">
                   <slot name="td1">
                     <v-avatar :size="avatarSize">
-                      <img :src="team.img" />
+                      <img v-lazy="team.img" />
                     </v-avatar>
                   </slot>
                 </td>
@@ -59,10 +59,7 @@
                   <slot name="td4">
                     <div class="outer-prog">
                       <span class="prog-text">{{ team.percent }}</span>
-                      <div
-                        class="inner-prog"
-                        :style="{ width: team.percent }"
-                      ></div>
+                      <div class="inner-prog" :style="{ width: team.percent }"></div>
                     </div>
                   </slot>
                 </td>
@@ -80,30 +77,18 @@
                     <v-tooltip top content-class="tooltip-content">
                       <template v-slot:activator="{ on }">
                         <v-btn small icon v-on="on" class="ma-0">
-                          <v-icon
-                            size="22px"
-                            class="hover green--text text--accent-3"
-                            >refresh</v-icon
-                          >
+                          <v-icon size="22px" class="hover green--text text--accent-3">refresh</v-icon>
                         </v-btn>
                       </template>
-                      <span class="grey--text text--darken-3 caption"
-                        >Refresh</span
-                      >
+                      <span class="grey--text text--darken-3 caption">Refresh</span>
                     </v-tooltip>
                     <v-tooltip top content-class="tooltip-content">
                       <template v-slot:activator="{ on }">
                         <v-btn small icon v-on="on" class="ma-0">
-                          <v-icon
-                            size="22px"
-                            class="hover pink--text text--accent-2"
-                            >clear</v-icon
-                          >
+                          <v-icon size="22px" class="hover pink--text text--accent-2">clear</v-icon>
                         </v-btn>
                       </template>
-                      <span class="grey--text text--darken-2 caption"
-                        >Remove</span
-                      >
+                      <span class="grey--text text--darken-2 caption">Remove</span>
                     </v-tooltip>
                   </slot>
                 </td>

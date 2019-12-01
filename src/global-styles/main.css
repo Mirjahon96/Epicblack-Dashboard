@@ -231,4 +231,31 @@ text {
   #lock {
     padding-top: 4rem;
   }
+
+  /* ShoppingTable component */
+  #shopping-table h4 {
+    font-size: 18px;
+  }
+  #shopping-table .pr-5 {
+    padding-right: 15px !important;
+  }
+
+  /* Location component */
+  #contact-us img {
+    top: 0 !important;
+  }
+
+  /* Timeline component */
+  #timeline .v-timeline-item {
+    display: -webkit-box !important;
+  }
+
+  #timeline .v-timeline-item__dot, #timeline .v-timeline:before {
+    display: none !important;
+  }
+
+  /* Faq component */
+  #faqs .faq-buttons {
+    display: block !important;
+  }
 }
